@@ -3,7 +3,7 @@
 <section>
 This was a very fun project for me. I took a few mini projects and tied them all into one.   
 <ul>
-<li>Weather API<li>
+<li>Weather API</li>
 <li>Clock with Date and current time</li>
 <li>Google Search Bar</li>
 <li>To-Do List</li>

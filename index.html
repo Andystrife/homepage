@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="home.jpg" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;1,400&family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/28536b6f32.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Welcome Home</title>
+  </head>
+
+  <body id="body_bg">
+    <!-- Weather and Clock Information -->
+    <header>
+      <!-- Weather -->
+      <section id="weatherApp">
+        <section id="details">
+          <div id="cityName"></div>
+          <div id="top">
+            <div id="left">
+              <img id="image" src="" alt="Weather Image Icon" />
+              <span class="description"></span>
+            </div>
+            <div id="middle">
+              <span id="temp"></span><span id="feelsLike"></span>
+            </div>
+            <div id="right">
+              <span id="humidity"></span>
+              <span id="wind"></span>
+            </div>
+          </div>
+        </section>
+      </section>
+      <!-- Clock  -->
+      <section id="clock_container">
+        <div id="dateClock"></div>
+        <div id="timeClock"></div>
+      </section>
+    </header>
+
+    <!-- Google Search  -->
+    <section id="search-block">
+      <div class="search" onclick="searchFocus()">
+        <i class="fa-solid fa-magnifying-glass mag_glass"></i>
+        <form method="get" action="https://www.google.com/search">
+          <input
+            id="searchBox"
+            type="text"
+            name="q"
+            placeholder="Search Google"
+            autofocus
+          />
+        </form>
+      </div>
+    </section>
+
+    <!-- Widgets Block -->
+    <section id="widgets_block">
+      <!-- To-Do List -->
+      <section class="todo_container">
+        <div class="todo_app">
+          <h2>TO DO LIST</h2>
+          <form id="todo">
+            <input id="todo_input" type="text" placeholder="Add new task..." />
+            <button type="submit">&plus;</button>
+          </form>
+          <ul id="todo_list"></ul>
+        </div>
+      </section>
+
+      <!-- Music Station -->
+      <section
+        class="music_container"
+        onClick="window.open('youtube.html','MusicPlayer','resizable,height=515,width=620'); return false;"
+      >
+        <div id="musicOverlay"></div>
+        <div id="musicHover">Music Station</div>
+      </section>
+      <!-- Calendar  -->
+      <section class="calendar_container">
+        <div class="card">
+          <h3 class="card-header" id="monthAndYear"></h3>
+          <table id="calendar">
+            <thead>
+              <tr>
+                <td>Sun</td>
+                <td>Mon</td>
+                <td>Tues</td>
+                <td>Wed</td>
+                <td>Thurs</td>
+                <td>Fri</td>
+                <td>Sat</td>
+              </tr>
+            </thead>
+            <tbody id="calendar-body"></tbody>
+          </table>
+
+          <div class="changeMonth">
+            <button class="cal_btn" onClick="previous()">Previous</button>
+            <button class="cal_btn" onClick="next()">Next</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Quote Generator -->
+      <section class="quote_container">
+        <p id="quote"></p>
+        <h3 id="author"></h3>
+        <button id="btn">New Quote</button>
+      </section>
+    </section>
+
+    <footer>
+      <i
+        class="fa-solid fa-copyright copyright"
+        onclick="alert('&copy; Andrew Dinsmore 2022')"
+      ></i>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="todo.js"></script>
+    <script src="calendar.js"></script>
+    <script src="search.js"></script>
+    <script src="weather.js"></script>
+    <script src="clock.js"></script>
+    <script src="quote.js"></script>
+    <script src="scripts.js"></script>
+  </body>
+</html>
